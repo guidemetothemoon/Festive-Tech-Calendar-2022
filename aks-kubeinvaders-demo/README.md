@@ -1,0 +1,2 @@
+This folder contains resources for the demo of chaos engineering experiments with KubeInvaders tool.
+In the terraform folder you can find infrastructure provisioning templates that will set up a simple AKS cluster that you can install applications to straight away.
