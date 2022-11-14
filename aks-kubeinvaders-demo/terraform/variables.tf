@@ -1,5 +1,5 @@
 variable "agent_count" {
-  default = 3
+  default = 1
 }
 
 # The following two variable declarations are placeholder references.
@@ -17,10 +17,9 @@ variable "cluster_name" {
 }
 
 variable "dns_prefix" {
-  default = "aks-kubeinvaders"
+  default = "akskubeinvaders"
 }
 
-# Refer to https://azure.microsoft.com/global-infrastructure/services/?products=monitor for available Log Analytics regions.
 variable "log_analytics_workspace_location" {
   default = "northeurope"
 }
@@ -29,7 +28,6 @@ variable "log_analytics_workspace_name" {
   default = "aksLogAnalyticsWorkspace"
 }
 
-# Refer to https://azure.microsoft.com/pricing/details/monitor/ for Log Analytics pricing
 variable "log_analytics_workspace_sku" {
   default = "PerGB2018"
 }
