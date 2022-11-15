@@ -60,7 +60,7 @@ ingress:
     kubernetes.io/ingress.class: addon-http-application-routing
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-  hostName: "kubeinvaders.0052554060204bd09309.northeurope.aksapp.io" #[AKS_DNS_ZONE]
+  hostName: "kubeinvaders.[AKS_DNS_ZONE]"
   tls: {}
 
 # Use route_host only if ingress is disabled

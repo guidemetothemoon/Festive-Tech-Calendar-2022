@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: chaos-nyan-cat.0052554060204bd09309.northeurope.aksapp.io #[AKS_DNS_ZONE]
+  - host: chaos-nyan-cat.[AKS_DNS_ZONE]
     http:
       paths:
       - backend:
