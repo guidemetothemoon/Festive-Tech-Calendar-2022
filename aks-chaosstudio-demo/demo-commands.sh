@@ -14,13 +14,15 @@ az account set --subscription "<SUBSCRIPTION_ID>"
 
 # Check deployment with Terraform Plan and output plan file for later use
 
-terraform plan -out ./plans/festivetech.tfplan
+terraform plan -out ./festivetech.tfplan
 
 # Apply configuration
 
-terraform apply ./plans/festivetech.tfplan
+terraform apply ./festivetech.tfplan
 
 # Install Chaos Mesh for use with Azure Chaos Studio
+
+# Login to AKS Cluster
 
 helm repo add chaos-mesh https://charts.chaos-mesh.org
 helm repo update
