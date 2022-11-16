@@ -4,6 +4,13 @@ resource "azurerm_resource_group" "resource_group" {
   name     = "rg-${var.resource_group_name}"
 }
 
+#Create Azure AD Group for AKS Management
+resource "azuread_group" "aks_administrators" {
+  display_name     = "${local.aks_cluster_name}-administrators"
+  security_enabled = true
+  description      = "Kubernetes administrators for the ${local.aks_cluster_name} cluster."
+}
+
 # Create AKS VNet
 resource "azurerm_virtual_network" "virtual_network" {
   name                = "vnet-${var.cluster_name}"
