@@ -20,6 +20,13 @@ terraform plan -out ./plans/festivetech.tfplan
 
 terraform apply ./plans/festivetech.tfplan
 
+# Install Chaos Mesh for use with Azure Chaos Studio
+
+helm repo add chaos-mesh https://charts.chaos-mesh.org
+helm repo update
+kubectl create ns chaos-testing
+helm install chaos-mesh chaos-mesh/chaos-mesh --namespace=chaos-testing --set chaosDaemon.runtime=containerd --set chaosDaemon.socketPath=/run/containerd/containerd.sock
+
 # POST DEMO ONLY - Destroy Demo Environment
 
 terraform destroy
