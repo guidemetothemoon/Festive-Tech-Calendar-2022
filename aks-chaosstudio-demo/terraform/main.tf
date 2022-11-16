@@ -6,9 +6,9 @@ resource "azurerm_resource_group" "resource_group" {
 
 #Create Azure AD Group for AKS Management
 resource "azuread_group" "aks_administrators" {
-  display_name     = "${local.aks_cluster_name}-administrators"
+  display_name     = "${var.cluster_name}-administrators"
   security_enabled = true
-  description      = "Kubernetes administrators for the ${local.aks_cluster_name} cluster."
+  description      = "Kubernetes administrators for the ${var.cluster_name} cluster."
 }
 
 # Create AKS VNet
@@ -80,8 +80,12 @@ resource "azurerm_kubernetes_cluster" "aks" {
     load_balancer_sku = "standard"
   }
 
-  service_principal {
-    client_id     = var.aks_service_principal_app_id
-    client_secret = var.aks_service_principal_client_secret
+  identity { type = "SystemAssigned" }
+
+  role_based_access_control_enabled = true
+
+  azure_active_directory_role_based_access_control {
+    managed                = true
+    admin_group_object_ids = [azuread_group.aks_administrators.object_id]
   }
 }
