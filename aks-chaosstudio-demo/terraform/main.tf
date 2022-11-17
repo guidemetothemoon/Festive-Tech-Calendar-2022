@@ -113,7 +113,7 @@ resource "azurerm_kubernetes_cluster" "aks_primary" {
 
   default_node_pool {
     name                 = "agentpool"
-    vm_size              = "Standard_B2s"
+    vm_size              = "Standard_D2s_v5"
     node_count           = var.agent_count
     vnet_subnet_id       = azurerm_subnet.aks_subnet_primary.id
     type                 = "VirtualMachineScaleSets"
@@ -154,7 +154,7 @@ resource "azurerm_kubernetes_cluster" "aks_secondary" {
 
   default_node_pool {
     name                 = "agentpool"
-    vm_size              = "Standard_B2s"
+    vm_size              = "Standard_D2s_v5"
     node_count           = var.agent_count
     vnet_subnet_id       = azurerm_subnet.aks_subnet_secondary.id
     type                 = "VirtualMachineScaleSets"
