@@ -22,7 +22,7 @@ terraform apply ./festivetech.tfplan
 
 # Install Chaos Mesh for use with Azure Chaos Studio
 
-# Login to AKS Cluster
+# Login to each AKS Cluster
 
 helm repo add chaos-mesh https://charts.chaos-mesh.org
 helm repo update

@@ -7,9 +7,15 @@ variable "resource_group_name" {
   description = "Name of the resource group."
 }
 
-variable "resource_group_location" {
+variable "resource_group_location_primary" {
   type        = string
   default     = "northeurope"
+  description = "Location of the resource group."
+}
+
+variable "resource_group_location_secondary" {
+  type        = string
+  default     = "westeurope"
   description = "Location of the resource group."
 }
 
