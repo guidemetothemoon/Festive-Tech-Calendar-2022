@@ -8,6 +8,7 @@ This list contains additional resources that you can refer to learn more about c
 * **KubeInvaders** - one of the chaos engineering tools that we have demonstrated during the session. You can find the source code and documentation on GitHub: https://github.com/lucky-sideburn/KubeInvaders
 * **Introduction to Chaos Engineering by Harness** - Harness has created a nice introductory learning module about chaos engineering which is free. In this module you can learn more about Chaos engineering principles, benefits, and why organizations are adopting it. https://university.harness.io/path/harness-chaos-engineering-practitioner/introduction-to-chaos-engineering
 * **Learn Chaos Engineering Series by QAInsights** is a great collection of YouTube videos that provide fundemental introduction to chaos engineering and show some of the chaos engineering tools in action: [Learn Chaos Engineering Series](https://www.youtube.com/playlist?list=PLJ9A48W0kpRKyBBmwOz6oSn4s3A90HHCj)
+* **Chaos Engineering Companies, People, Tools & Practices** is a visualization in form of a map of companies, people, tools and practices that are related to chaos engineering domain: [Chaos Engineering Companies, People, Tools & Practices](https://coggle.it/diagram/WiKceGDAwgABrmyv/t/chaos-engineeringcompanies%2C-people%2C-tools-practices/0a2d4968c94723e48e1256e67df51d0f4217027143924b23517832f53c536e62)
 
 Have fun and if you have any questions on this topic, please don't hesitate to reach out to us!🤗
 
